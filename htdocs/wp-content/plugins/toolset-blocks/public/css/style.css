@@ -1,0 +1,335 @@
+/* These styles are applied to frontend and edit view */
+.tb-align-center {
+  text-align: center; }
+
+.tb-align-right {
+  text-align: right; }
+
+.tb-align-left {
+  text-align: left; }
+
+.tb-screen-reader {
+  /* https://a11yproject.com/posts/how-to-hide-content/ */
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+/* TB Audio
+***************************************/
+.tb-audio {
+  margin-bottom: 1em; }
+
+/* TB Button
+***************************************/
+.tb-button {
+  color: #f1f1f1; }
+  .tb-button__link {
+    background-color: #444;
+    border-radius: 0.3em;
+    font-size: 1.3em;
+    margin-bottom: 0.76em;
+    padding: 0.5em 1.5em 0.52em; }
+    .tb-button__link:hover, .tb-button__link:focus {
+      opacity: 0.9; }
+
+/* TB Countdown
+***************************************/
+.tb-countdown__days, .tb-countdown__hours, .tb-countdown__minutes, .tb-countdown__seconds, .tb-countdown__message {
+  background-color: #444;
+  color: #f1f1f1;
+  font-size: 48px;
+  margin: 0 5px 16px 5px;
+  padding: 0.4em 1em 0.6em 1em;
+  border-radius: 0.2em; }
+
+.tb-countdown__label {
+  letter-spacing: 1px; }
+
+/* TB Progress
+***************************************/
+.tb-progress svg {
+  margin: 1em 0; }
+
+.tb-progress__trail {
+  stroke-linecap: round;
+  stroke: #c1c1c1; }
+
+.tb-progress__stroke {
+  stroke-linecap: round;
+  stroke: #444; }
+
+.tb-progress__text {
+  fill: #fff; }
+
+/* TB Star rating
+***************************************/
+.tb-rating {
+  color: #c1c1c1;
+  font-size: 1.3em;
+  line-height: 1.3; }
+  .tb-rating__rating {
+    color: #e4cc29; }
+
+/* TB Video
+***************************************/
+.tb-video {
+  margin-bottom: 1em; }
+
+.tb-container p:first-child {
+  margin-top: 0 !important; }
+
+.tb-container p:last-child {
+  margin-bottom: 0 !important; }
+
+.tb-container figure {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.tb-audio audio {
+  width: 100%;
+  min-width: 300px; }
+
+/**
+ * Button styles for front-end
+ *
+ * @since 1.0.0
+ */
+.tb-button--left {
+  text-align: left; }
+
+.tb-button--center {
+  text-align: center; }
+
+.tb-button--right {
+  text-align: right; }
+
+.tb-button__link {
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.3 !important;
+  text-decoration: none !important;
+  text-align: center; }
+  .tb-button__link:hover, .tb-button__link:focus, .tb-button__link:visited {
+    color: inherit; }
+
+.tb-button__icon {
+  display: inline-block;
+  vertical-align: text-bottom;
+  font-style: normal !important; }
+  .tb-button__icon::before {
+    content: attr(data-font-code);
+    font-weight: normal !important; }
+
+.tb-countdown {
+  display: flex;
+  justify-content: center;
+  align-items: baseline; }
+  @media (max-width: 767px) {
+    .tb-countdown {
+      flex-wrap: wrap; } }
+  .tb-countdown__days, .tb-countdown__hours, .tb-countdown__minutes, .tb-countdown__seconds, .tb-countdown__message {
+    text-align: center;
+    line-height: 1.5; }
+  .tb-countdown__number, .tb-countdown__label {
+    display: block; }
+  .tb-countdown__label {
+    font-size: 0.25em; }
+  .tb-countdown__message {
+    display: none; }
+    .tb-countdown__message--preview {
+      display: block; }
+
+/**
+ * Field styles for front-end
+ *
+ * @since 1.0.0
+ */
+.tb-field--left {
+  text-align: left; }
+
+.tb-field--center {
+  text-align: center; }
+
+.tb-field--right {
+  text-align: right; }
+
+.tb-field__skype_preview {
+  padding: 10px 20px;
+  border-radius: 3px;
+  color: #fff;
+  background: #00afee;
+  display: inline-block; }
+
+.entry .entry-content .wp-block-image .tb-image.aligncenter {
+  margin-left: auto;
+  margin-right: auto; }
+
+.tb-image img {
+  max-width: 100%;
+  height: auto; }
+
+.tb-progress {
+  text-align: center; }
+  .tb-progress svg {
+    display: inline-block;
+    overflow: visible !important; }
+
+.components-radio-control {
+  display: flex;
+  flex-direction: column; }
+  .components-radio-control__option:not(:last-child) {
+    margin-bottom: 4px; }
+  .components-radio-control__input[type="radio"] {
+    margin-top: 0;
+    margin-right: 6px; }
+  .components-radio-control__help-icon::before {
+    content: "\f223";
+    font-family: dashicons, sans-serif; }
+
+.tb-repeating-field__skype_preview {
+  padding: 10px 20px;
+  border-radius: 3px;
+  color: #fff;
+  background: #00afee;
+  display: inline-block; }
+
+.tb-repeating-field--grid {
+  display: grid;
+  justify-items: center; }
+  .tb-repeating-field--grid img,
+  .tb-repeating-field--grid video {
+    max-width: 100%;
+    display: block;
+    box-shadow: none !important; }
+
+.tb-repeating-field:not(.tb-repeating-field--crop) .tb-repeating-field--grid {
+  align-items: center; }
+
+.tb-repeating-field--crop .tb-repeating-field--grid div,
+.tb-repeating-field--crop .tb-repeating-field--flexbox div {
+  width: 100%; }
+  .tb-repeating-field--crop .tb-repeating-field--grid div img,
+  .tb-repeating-field--crop .tb-repeating-field--flexbox div img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    width: 100%; }
+
+.tb-repeating-field--flexbox {
+  display: flex; }
+  .tb-repeating-field--flexbox img {
+    display: block;
+    box-shadow: none !important; }
+
+.tb-repeating-field--masonry {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -8px;
+  /* Adjustment for the gutter */
+  width: 100%; }
+  .tb-repeating-field--masonry-brick {
+    flex: auto;
+    height: 250px;
+    min-width: 150px;
+    margin: 0 8px 8px 0;
+    /* Some gutter */ }
+    @media only screen and (min-width: 1024px) {
+      .tb-repeating-field--masonry-brick:nth-child(4n+1) {
+        width: 250px; }
+      .tb-repeating-field--masonry-brick:nth-child(4n+2) {
+        width: 325px; }
+      .tb-repeating-field--masonry-brick:nth-child(4n+3) {
+        width: 180px; }
+      .tb-repeating-field--masonry-brick:nth-child(4n+4) {
+        width: 380px; } }
+    @media only screen and (max-width: 1023px) and (min-width: 768px) {
+      .tb-repeating-field--masonry-brick:nth-child(4n+1) {
+        width: 200px; }
+      .tb-repeating-field--masonry-brick:nth-child(4n+2) {
+        width: 250px; }
+      .tb-repeating-field--masonry-brick:nth-child(4n+3) {
+        width: 120px; }
+      .tb-repeating-field--masonry-brick:nth-child(4n+4) {
+        width: 280px; } }
+    .tb-repeating-field--masonry-brick img,
+    .tb-repeating-field--masonry-brick iframe,
+    .tb-repeating-field--masonry-brick video {
+      -o-object-fit: cover;
+         object-fit: cover;
+      width: 100% !important;
+      height: 100% !important;
+      display: block; }
+  .editor-block-list__block-edit .tb-repeating-field--masonry-brick {
+    height: 130px; }
+    .editor-block-list__block-edit .tb-repeating-field--masonry-brick:nth-child(4n+1) {
+      width: 150px; }
+    .editor-block-list__block-edit .tb-repeating-field--masonry-brick:nth-child(4n+2) {
+      width: 180px; }
+    .editor-block-list__block-edit .tb-repeating-field--masonry-brick:nth-child(4n+3) {
+      width: 90px; }
+    .editor-block-list__block-edit .tb-repeating-field--masonry-brick:nth-child(4n+4) {
+      width: 210px; }
+
+.tb-social-share__network {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin-right: 7px;
+  margin-bottom: 7px; }
+
+/**
+ * Star rating styles for front+end
+ *
+ * @since 1.0.0
+ */
+.tb-rating {
+  position: relative;
+  white-space: nowrap;
+  /* DASHICONS */ }
+  .tb-rating__container {
+    position: relative;
+    display: inline-block; }
+  .tb-rating__star {
+    display: inline-block;
+    position: relative; }
+    .tb-rating__star::before {
+      content: attr(data-star);
+      display: inline-block;
+      clear: both; }
+  .tb-rating__rating {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap; }
+    .tb-rating__rating::after {
+      content: attr(data-star); }
+  .tb-rating--left {
+    text-align: left; }
+  .tb-rating--right {
+    text-align: right; }
+  .tb-rating--center {
+    text-align: center; }
+  .tb-rating--dashicons .tb-rating__star::before {
+    font-family: dashicons, sans-serif; }
+  .tb-rating--dashicons .tb-rating__rating::after {
+    font-family: dashicons, sans-serif; }
+
+/* These styles are applied to frontend and edit view */
+.tb-video {
+  margin-left: 0;
+  margin-right: 0; }
+  .tb-video video {
+    max-width: 100%; }
+  .tb-video.alignwide video, .tb-video.alignfull video {
+    width: 100%; }
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
+    .tb-video [poster] {
+      -o-object-fit: cover;
+         object-fit: cover; } }
+  .tb-video.aligncenter {
+    text-align: center; }
+

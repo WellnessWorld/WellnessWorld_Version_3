@@ -1,0 +1,27 @@
+.b2s-dashboard-h5{
+    font-size: 26px;
+}
+.b2s-faq-content a{
+    color: #79B232;
+}
+#b2s_howto_text{
+    font-size: 22px;
+    margin-bottom: 30px !important;
+}
+#b2s_faq_text{
+    font-size: 22px;
+}
+@media (max-width: 768px)
+{
+    body .col-md-6{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #b2s_howto_text {
+        font-size: 16px;
+        margin-top: 5px !important;
+    }
+    #b2s_faq_text{
+        font-size: 16px;
+    }
+}

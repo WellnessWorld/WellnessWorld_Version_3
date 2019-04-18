@@ -1,0 +1,38 @@
+{#
+    Table with content layouts that are in the migration process.
+#}
+
+<div class="wrap">
+
+        <table class="wp-list-table widefat fixed striped posts js-table-migration-items">
+            <thead>
+            <tr>
+                <th scope="col" class="manage-column">{{ __( 'Title', 'ddl-layouts')}}</th>
+                <th scope="col" class="manage-column">{{ __( 'Post type', 'ddl-layouts')}}</th>
+                <th scope="col" class="manage-column">{{ __( 'Content Layout', 'ddl-layouts')}}</th>
+                <th scope="col" class="manage-column">{{ __( 'Template Layout', 'ddl-layouts')}}</th>
+                {% if is_wpml() %}
+                    <th scope="col" class="manage-column">{{ __( 'Language', 'ddl-layouts')}}</th>
+                {% endif %}
+                <th class="tlm-column-last">&nbsp;</th>
+                <th class="tlm-column-last">&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% include '/list-eligible/tlm-migrate-items-row-snippet.tpl.twig' %}
+            </tbody>
+            <tfoot>
+            <tr>
+                <th scope="col" class="manage-column">{{ __( 'Title', 'ddl-layouts')}}</th>
+                <th scope="col" class="manage-column">{{ __( 'Post type', 'ddl-layouts')}}</th>
+                <th scope="col" class="manage-column">{{ __( 'Content Layout', 'ddl-layouts')}}</th>
+                <th scope="col" class="manage-column">{{ __( 'Template Layout', 'ddl-layouts')}}</th>
+                {% if is_wpml() %}
+                <th scope="col" class="manage-column">{{ __( 'Language', 'ddl-layouts')}}</th>
+                {% endif %}
+                <th class="tlm-column-last">&nbsp;</th>
+                <th class="tlm-column-last">&nbsp;</th>
+            </tr>
+            </tfoot>
+        </table>
+</div>

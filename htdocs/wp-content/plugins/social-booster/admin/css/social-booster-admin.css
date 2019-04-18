@@ -1,0 +1,251 @@
+/**
+ * All of the CSS for admin-specific functionality is
+ * included in this file.
+ */
+
+
+
+
+
+
+
+ .mydiv {
+	color:red;
+	background-color: white;
+	margin-left: 10%;
+}
+
+
+.pdiv {
+	font-size: 200%;
+	margin-top: 150px;
+}
+
+label {
+    cursor: pointer;
+    padding-right: 4px;
+}
+.navigation_bar li {
+	margin-bottom:0px;
+}
+   .navigation_bar ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width:10%;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;  
+    margin-top: 10%;
+    float: left;
+    margin-left: 10%;
+
+  }
+   .navigation_bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 45px 38px;
+    text-decoration: none;
+   }
+    .soc_form_primary {
+    margin-left: 20%;
+    margin-top: 10%;
+    border:20px solid #fff;
+    background-clip:padding-box	;
+    width:65%;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    }
+    .navigation_bar li a:hover:not(.active) {
+    background-color: #111;
+    }
+    .status_form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    }
+    .status_form h3 {
+    text-align: center;
+    font-family: 'bitter';
+    font-weight: bolder;
+    font-size: 150%;
+    }
+
+    .label_design {
+    font-family: 'bitter';
+    font-weight: bold;
+    font-size: 120%;
+    }
+
+    .authlabel {
+    font-family: 'bitter';
+    font-weight: bold;
+    font-size: 120%;
+    margin-left:5%;
+    }
+
+    .label_design2 {
+    font-family: 'bitter';
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+    color: green;
+    }
+    .schedule_form h3 {
+    text-align: center;
+    font-family: 'bitter';
+    font-weight: bolder;
+    font-size: 150%;
+    }
+    .schedule_form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 2%;
+    }
+    .fbinfo_form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    }
+    .fbinfo_form h3 {
+    text-align: center;
+    font-family: 'bitter';
+    font-weight: bolder;
+    font-size: 150%;
+    }
+    .label_design {
+    font-family: 'bitter';
+    font-weight: bold;
+    font-size: 120%;
+    }
+
+
+    div#fbsavedinfo {
+    text-align: center;
+    }
+
+    div#twsavedinfo {
+      text-align: center;
+    
+    }
+    div#homesavedinfo {
+      text-align: center;
+    
+    }
+
+    .headposter{
+    margin-bottom: -2%;
+    text-align: center;
+    font-style: oblique;
+    font-family: cursive;
+    font-size: 900%;
+    }
+    #fullname {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+
+    #authcode {
+    width: 15%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left:10%;
+    }
+
+
+    #submit_form {
+    width: 100px;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    .authbtn {
+    width: 100px;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+   #fbform br {
+   clear: none;
+   }
+   #twform br {
+   clear: none;
+   }
+   .sb_guide {
+    text-align: center;
+    margin-top: 10%;
+   }
+   .sb_guide_list {
+    display: grid;
+    font-weight: 900;
+    margin-left: 5%;
+   }
+    
+   /*media queries  */
+
+@media (max-width: 1440px) {
+
+    .navigation_bar li a{
+	  padding: 43px 38px;
+	}
+
+    }
+
+@media (max-width: 1024px) {
+	.navigation_bar ul {
+		margin-left:0%;
+		width:17%;
+	}
+	.navigation_bar li a{
+	  padding: 43px 38px;
+	}
+
+}
+@media (max-width: 768px) {
+	.navigation_bar li a{
+	  padding: 46px 38px;
+	}
+	.navigation_bar ul {
+		margin-left:0%;
+		width:20%;
+	}
+}
+
+@media (max-width: 28em) and (min-width:18em) {
+	.navigation_bar li a {
+    padding: 3.5em 0;
+	}
+	.soc_form_primary{
+	margin-left: 25%;
+    margin-top: 10%;
+    padding: 10px;
+	}
+	.status_form{
+	padding:10px;
+	}
+	.navigation_bar ul {
+    margin-left: 0%;
+    width: 25%;
+	}
+}

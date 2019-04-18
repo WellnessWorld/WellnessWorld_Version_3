@@ -1,0 +1,32 @@
+{#
+    Template for post types without templates notice
+#}
+
+<div class="notice error tlm-no-template-notice">
+    <p>{{ __('The site is missing Template Layouts for the following types:') }}</p>
+    <ul class="post-types-no-tpl-list">
+        <li class="header-like-list-item">
+            <span class="tlm-table-col-one tlm-table-col">
+                    {{ __('Content type') }}
+            </span>
+            <span class="tlm-table-col-two tlm-table-col">
+                {{ __('Create Template Layout') }}
+            </span>
+        </li>
+        {% autoescape %}
+            {% for item in items %}
+                <li data-post_type="{{ item.name }}" class="post-types-no-tpl-list-item">
+                    <span class="tlm-table-col-one tlm-table-col">
+                        {{ item.label }}
+                    </span>
+                    <span class="tlm-table-col-two tlm-table-col"><a
+                            data-post_type="{{ item.name }}" href="#" class="create-layout-for-post-type button button-small button-secondary"
+                            data-post_type_label="{{ item.label }}" name="{{ item.name }}"
+                            alt="{{ item.label }}">{{ __('Create a Template layout for ') }}{{ item.label }}</a>
+                    </span>
+                </li>
+            {% endfor %}
+        {% endautoescape %}
+    </ul>
+    <p>{{ __('Normally, you should create Template Layouts for content before you begin the migration. If you decide to skip creating templates, you can select "no template layout" in the table below.') }}</p>
+</div>

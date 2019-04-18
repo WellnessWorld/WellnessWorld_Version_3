@@ -1,0 +1,764 @@
+/**
+ * Reference Sites management admin page
+ */
+.fidemo-refsites {
+    clear: both;
+    padding: 0 0 100px;
+}
+/**
+ * Main fidemo-refsite element
+ * (has flexible margins)
+ */
+.fidemo-refsite {
+    cursor: pointer;
+    float: left;
+    margin: 0 4% 4% 0;
+    position: relative;
+    width: 30.6%;
+    border: 1px solid #dedede;
+    box-shadow: 0px 0px 1px #888888;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div.fidemo_installed{
+    box-shadow: 1px 1px 10px green;
+
+}
+div.fidemo-refsite.focus {
+    box-shadow: 2px 2px 30px #888888;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ie8 .fidemo-refsite {
+    width: 30%;
+    margin: 0 3% 4% 0;
+}
+
+.fidemo-refsite:nth-child(3n) {
+    margin-right: 0;
+}
+
+.fidemo-refsite:hover,
+.fidemo-refsite:focus {
+    cursor: pointer;
+}
+
+.fidemo-refsite .fidemo-refsite-name {
+    font-size: 15px;
+    font-weight: 600;
+    height: 18px;
+    margin: 0;
+    padding: 15px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: #fff;
+    background: rgba(255,255,255,0.65);
+}
+
+/* Activate and Customize buttons, shown on hover and focus */
+.fidemo-refsite .fidemo-refsite-actions {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    -webkit-transition: opacity 0.1s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 38px;
+    padding: 9px 10px 0 10px;
+    background: rgba(244, 244, 244, 0.7);
+    border-left: 1px solid rgba(0,0,0,0.05);
+}
+
+.fidemo-refsite:hover .fidemo-refsite-actions,
+.fidemo-refsite.focus .fidemo-refsite-actions,
+.fidemo-refsite:focus .fidemo-refsite-actions {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+}
+
+.fidemo-refsite .fidemo-refsite-actions .button-primary {
+    margin-right: 3px;
+}
+
+.fidemo-refsite .fidemo-refsite-actions .button-secondary {
+    float: none;
+    margin-left: 3px;
+}
+
+/**
+ * fidemo-refsite Screenshot
+ *
+ * Has a fixed aspect ratio of 1.5 to 1 regardless of screenshot size
+ * It is also responsive.
+ */
+.fidemo-refsite .fidemo-refsite-screenshot {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.fidemo-refsite .fidemo-refsite-screenshot:after {
+    content: '';
+    display: block;
+    padding-top: 66.66666%; /* using a 3/2 aspect ratio */
+}
+
+.fidemo-refsite .fidemo-refsite-screenshot img {
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    -webkit-transform: translateZ( 0 ); /* Prevents rendering bugs in Chrome */
+    -webkit-transition: opacity 0.2s ease-in-out; /* Prevents rendering bugs in Chrome */
+    transition: opacity 0.2s ease-in-out;
+}
+
+.fidemo-refsite.focus .fidemo-refsite-screenshot img{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0.6;
+    -webkit-transition: opacity 0.1s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.fidemo-refsite-inactive {
+    position: relative;
+    z-index: 1;
+}
+
+.fidemo-refsite-inactive-info {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    font-size: 10px;
+    color: #c03;
+    background-color: #fff;
+    bottom: 0;
+    z-index: 101;
+    padding: 2px 15px 1px;
+    border-top: 1px solid #d8d8d8;
+}
+
+.fidemo-refsite-inactive img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(1);
+}
+
+.fidemo-refsite:hover .fidemo-refsite-screenshot,
+.fidemo-refsite:focus .fidemo-refsite-screenshot {
+    background: #fff;
+}
+
+.fidemo-refsite-browser.rendered .fidemo-refsite:hover .fidemo-refsite-screenshot img,
+.fidemo-refsite-browser.rendered .fidemo-refsite:focus .fidemo-refsite-screenshot img {
+    opacity: 0.4;
+}
+
+.fidemo-refsite .more-details {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    position: absolute;
+    top: 35%;
+    right: 25%;
+    left: 25%;
+    background: #222;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 15px;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+    -webkit-font-smoothing: antialiased;
+    font-weight: 600;
+    padding: 15px 12px;
+    text-align: center;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: opacity 0.1s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.fidemo-refsite.focus {
+    border-color: #5b9dd9;
+    -webkit-box-shadow: 0 0 2px rgba( 30, 140, 190, 0.8 );
+    box-shadow: 0 0 2px rgba( 30, 140, 190, 0.8 );
+}
+
+.fidemo-refsite.focus .more-details {
+    opacity: 1;
+}
+
+/* Current fidemo-refsite needs to have its action always on view */
+.fidemo-refsite.active:focus .fidemo-refsite-actions {
+    display: block;
+}
+
+.fidemo-refsite-browser.rendered .fidemo-refsite:hover .more-details,
+.fidemo-refsite-browser.rendered .fidemo-refsite:focus .more-details {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+}
+
+/**
+ * Displays a fidemo-refsite update notice
+ * when an update is available.
+ */
+.fidemo-refsite .fidemo-refsite-update,
+.fidemo-refsite .fidemo-refsite-installed {
+    background: #d54e21;
+    background: rgba(213, 78, 33, 0.95);
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+
+.fidemo-refsite .fidemo-refsite-update:before,
+.fidemo-refsite .fidemo-refsite-installed:before {
+    content: '\f463';
+    display: inline-block;
+    font: normal 20px/1 'dashicons';
+    margin: 0 6px 0 0;
+    opacity: 0.8;
+    position: relative;
+    top: 5px;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/**
+ * The currently active fidemo-refsite
+ */
+.fidemo-refsite.active .fidemo-refsite-name {
+    background: #2f2f2f;
+    color: #fff;
+    padding-right: 110px;
+    font-weight: 300;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.5);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.5);
+}
+
+.fidemo-refsite.active .fidemo-refsite-name span {
+    font-weight: 600;
+}
+
+.fidemo-refsite.active .fidemo-refsite-actions {
+    background: rgba(49,49,49,0.7);
+    border-left: none;
+    opacity: 1;
+}
+
+.fidemo-refsite.active .fidemo-refsite-actions .button-primary {
+    margin-right: 0;
+}
+
+.fidemo-refsite .fidemo-refsite-author {
+    background: #222;
+    color: #eee;
+    display: none;
+    font-size: 14px;
+    margin: 0 10px;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 56px;
+}
+
+.fidemo-refsite.display-author .fidemo-refsite-author {
+    display: block;
+}
+
+.fidemo-refsite.display-author .fidemo-refsite-author a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Search form */
+.manage-sites_page_manage-fidemo-refsites .wp-filter-search {
+    position: relative;
+    top: -2px;
+    left: 20px;
+    margin: 0;
+    width: 280px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-backdrop {
+    position: absolute;
+    left: -20px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #f1f1f1;
+    background: rgba(238,238,238,.9);
+    z-index: 10
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    border-bottom: 1px solid #ddd
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-header .close {
+    cursor: pointer;
+    height: 48px;
+    width: 50px;
+    text-align: center;
+    float: right;
+    border: 0;
+    border-left: 1px solid #ddd;
+    background-color: transparent;
+    -webkit-transition: color .1s ease-in-out,background .1s ease-in-out;
+    transition: color .1s ease-in-out,background .1s ease-in-out
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-header .close:before {
+    font: 400 22px/50px dashicons!important;
+    color: #777;
+    display: inline-block;
+    content: '\f335';
+    font-weight: 300
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-header .left,.fidemo-refsite-overlay .fidemo-refsite-header .right {
+    cursor: pointer;
+    color: #777;
+    background-color: transparent;
+    height: 48px;
+    width: 54px;
+    float: left;
+    text-align: center;
+    border: 0;
+    border-right: 1px solid #ddd;
+    -webkit-transition: color .1s ease-in-out,background .1s ease-in-out;
+    transition: color .1s ease-in-out,background .1s ease-in-out
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-header .close:focus,.fidemo-refsite-overlay .fidemo-refsite-header .close:hover,.fidemo-refsite-overlay .fidemo-refsite-header .left:focus,.fidemo-refsite-overlay .fidemo-refsite-header .left:hover,.fidemo-refsite-overlay .fidemo-refsite-header .right:focus,.fidemo-refsite-overlay .fidemo-refsite-header .right:hover {
+    background: #ddd;
+    border-color: #ccc;
+    color: #000
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-header .close:focus:before,.fidemo-refsite-overlay .fidemo-refsite-header .close:hover:before {
+    color: #000
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-header .close:focus,.fidemo-refsite-overlay .fidemo-refsite-header .left:focus,.fidemo-refsite-overlay .fidemo-refsite-header .right:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 0
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-header .left.disabled,.fidemo-refsite-overlay .fidemo-refsite-header .left.disabled:hover,.fidemo-refsite-overlay .fidemo-refsite-header .right.disabled,.fidemo-refsite-overlay .fidemo-refsite-header .right.disabled:hover {
+    color: #ccc;
+    background: inherit;
+    cursor: inherit
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-header .left:before,.fidemo-refsite-overlay .fidemo-refsite-header .right:before {
+    font: 400 20px/50px dashicons!important;
+    display: inline;
+    font-weight: 300
+}
+
+.rtl .fidemo-refsite-overlay .fidemo-refsite-header .right:before,.fidemo-refsite-overlay .fidemo-refsite-header .left:before {
+    content: '\f341'
+}
+
+.rtl .fidemo-refsite-overlay .fidemo-refsite-header .left:before,.fidemo-refsite-overlay .fidemo-refsite-header .right:before {
+    content: '\f345'
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-wrap {
+    clear: both;
+    position: fixed;
+    top: 9%;
+    left: 190px;
+    right: 30px;
+    bottom: 3%;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 20px 5px rgba(0,0,0,.1);
+    box-shadow: 0 1px 20px 5px rgba(0,0,0,.1);
+    z-index: 20;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-wrap:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+body.folded .fidemo-refsite-overlay .fidemo-refsite-wrap {
+    left: 70px
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-name {
+    color: #23282d;
+    font-size: 32px;
+    font-weight: 100;
+    margin: 10px 0 0;
+    line-height: 1.3;
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-author {
+    color: #686868;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 15px 0 25px;
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-versions .fidemo-refsite-author,
+.fidemo-refsite-overlay .fidemo-refsite-plugins .fidemo-refsite-author {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 30px 0 0;
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-description {
+    color: #555;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 30px 0 0;
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-screenshot .screenshot {
+    border: 1px solid #fff;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.2);
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-screenshot img {
+    max-width: 100%;
+    height: auto;
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-about {
+    position: absolute;
+    top: 49px;
+    bottom: 130px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    padding: 2% 4%
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-about:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-actions {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 25px 5px;
+    background: #f3f3f3;
+    z-index: 30;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-top: 1px solid #eee
+}
+
+.ie8 .fidemo-refsite-overlay .fidemo-refsite-actions {
+    border: 1px solid #eee
+}
+
+.fidemo-refsite-overlay .fidemo-refsite-actions a {
+    margin-right: 5px;
+    margin-bottom: 5px
+}
+
+@media only screen and (max-width: 1020px ) {
+    .fidemo-refsite-overlay .fidemo-refsite-versions,
+    .fidemo-refsite-overlay .fidemo-refsite-plugins {
+        clear: both;
+    }
+}
+
+@media only screen and (max-width: 760px ) {
+
+    .fidemo-refsite-overlay .fidemo-refsite-name {
+        font-size: 24px;
+    }
+
+    .fidemo-refsite-overlay .fidemo-refsite-screenshot,
+    .fidemo-refsite-overlay .fidemo-refsite-info,
+    .fidemo-refsite-overlay .fidemo-refsite-versions,
+    .fidemo-refsite-overlay .fidemo-refsite-plugins {
+        width: 100%;
+        max-width: 100%;
+        float: none;
+    }
+
+    .fidemo-refsite-overlay .fidemo-refsite-screenshot {
+        padding: 0 0 30px 0;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .fidemo-refsite-overlay .fidemo-refsite-update,
+    .fidemo-refsite-overlay .fidemo-refsite-description {
+        margin-left: 0;
+    }
+
+    .fidemo-refsite-overlay .fidemo-refsite-actions .inactive-fidemo-refsite {
+        display: inline;
+    }
+
+    .fidemo-refsite-overlay .fidemo-refsite-info {
+        width: 100%;
+    }
+
+    .fidemo-refsite-overlay .fidemo-refsite-author {
+        margin: 5px 0 15px 0;
+    }
+
+    .fidemo-refsite-overlay .current-label {
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    .fidemo-refsites-php .wrap h2 {
+        width: 100%;
+    }
+
+    .fidemo-refsites-php .wp-filter-search {
+        float: none;
+        clear: both;
+        left: 0;
+        top: 0;
+        right: 0;
+        margin: 10px 0;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .fidemo-refsite.add-new-fidemo-refsite span:after {
+        font: normal 60px/90px 'dashicons';
+        width: 80px;
+        height: 80px;
+        top: 30%;
+        left: 50%;
+        text-indent: 0;
+        margin-left: -40px;
+    }
+
+    .single-fidemo-refsite .fidemo-refsite-wrap {
+        margin: 0 -12px 0 -10px;
+        padding: 10px;
+    }
+    .single-fidemo-refsite .fidemo-refsite-overlay .fidemo-refsite-about {
+        padding: 10px;
+        overflow: visible;
+    }
+    .single-fidemo-refsite .current-label {
+        display: none;
+    }
+    .single-fidemo-refsite .fidemo-refsite-overlay .fidemo-refsite-actions {
+        position: static;
+    }
+}
+
+.fidemo-refsite-install-progress {
+    clear: both;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2% 4%;
+    background: #fff;
+    opacity: 1;
+    height:100%;
+    width: 90%;
+}
+
+.fidemo-refsite-actions .prequisite_error_div_msg a[href^="//"]:after,
+.fidemo-refsite-actions .prequisite_error_div_msg a[href^="http://"]:after,
+.fidemo-refsite-actions .prequisite_error_div_msg a[href^="https://"]:after {
+    content: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png);
+    margin: 0 0 0 5px;
+}
+
+.toplevel_page_manage-fidemo-refsites .wp-filter-search {
+    margin-left:3%;
+}
+.fidemo-refsite-actions .prequisite_error_div_msg {
+    text-align:left;
+}
+.fidemo-refsite-actions .wpmlversion_div_msg {
+    text-align:left;
+}
+
+@media only screen and (max-width: 960px ) {
+    .fidemo-refsite-overlay .fidemo-refsite-wrap {
+        left: 60px;
+    }
+}
+
+@media only screen and (max-width: 780px ) {
+    .fidemo-refsite {
+        width: 48%;
+    }
+
+    .fidemo-refsite:nth-child(3n) {
+        margin-right: 4%;
+    }
+
+    .fidemo-refsite:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    body.modal-open {
+        overflow-y: inherit;
+    }
+
+    .fidemo-refsite-overlay .fidemo-refsite-wrap,
+    .fidemo-refsite-overlay .fidemo-refsite-about {
+        position: absolute;
+        top: 70px;
+        bottom: auto;
+    }
+    .fidemo-refsite-overlay .fidemo-refsite-header,
+    .fidemo-refsite-overlay .fidemo-refsite-about,
+    .fidemo-refsite-overlay .fidemo-refsite-actions,
+    .fidemo-refsite-overlay .fidemo-refsite-install-progress {
+        position: relative;
+    }
+
+    .fidemo-refsite-overlay .fidemo-refsite-about {
+        overflow: visible;
+        top: 0;
+        bottom: auto;
+    }
+
+    .fidemo-refsite-overlay .fidemo-refsite-wrap {
+        left: 30px;
+    }
+
+    .wpvdemo-warning {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .wpvdemo-warning p {
+        margin-left: 0 !important;
+    }
+}
+
+body.mobile.modal-open #wpwrap {
+    position: absolute;
+    overflow-y: visible;
+}
+
+body.mobile.modal-open {
+    display: none;
+}
+
+@media only screen and (max-width: 420px ) {
+    .fidemo-refsite {
+        width: 100%;
+    }
+
+    .fidemo-refsite {
+        margin-right: 0 !important;
+    }
+
+    .fidemo-refsite-overlay .fidemo-refsite-wrap {
+        left: 0;
+        right: 10px;
+    }
+}
+
+div.fidemo-dialog .ui-dialog-buttonset{
+    width: 100%;
+    text-align: center;
+}
+
+.fidemo-refsite-info{
+    margin: 20px;
+    clear: both;
+}
+
+.fidemo-refsite-image{
+    width: 50%;
+    float:left;
+}
+.fidemo-refsite-image img{
+    border:1px solid #ccc;
+    max-width: 100%;
+    max-height: 100%;
+}
+.fidemo-refsite-action{
+    float:left;
+    width:45%;
+    margin-left:20px;
+}
+.fidemo-installation-notice span{
+    color: #f55;
+    pdding-top:20px;
+}
+.fidemo-plugin-error{
+    padding-left:20px;
+    color: #f55;
+}
+div.fidemo-dialog .ui-dialog-buttonset button{
+    margin-left: 15px;
+}
+.refsite-actions{
+    clear:both;
+    margin:20px;
+    padding-top:20px;
+
+}
+.fidemo-notice {
+    border-left:4px solid #f55;
+    padding:10px 20px;
+    color:#f55;
+}
+div.fidemo-notice-green{
+    color: green;
+    border-left:4px solid green;
+}
+.fidemo-refsite-action li{
+    font-size:14px;
+    line-hegith:20px;
+}
+.fidemo-refsite-action div.error label {
+    font-size: 16px;
+}
+.fidemo-refsite-action h2, .fidemo-refsite-action h1{
+    line-height:24px;
+}

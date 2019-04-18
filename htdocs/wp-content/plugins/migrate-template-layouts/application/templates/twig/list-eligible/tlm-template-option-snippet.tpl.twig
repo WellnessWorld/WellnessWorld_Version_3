@@ -1,0 +1,6 @@
+{#
+    Options for template selector
+#}
+{% for template in item.eligible_templates  %}
+	<option class="tlm-template-option" {{ template.selected }} value="{{ template.id }}">{{ template.title }}</option>
+{% endfor %}

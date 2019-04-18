@@ -1,0 +1,217 @@
+/*Custom*/
+
+.b2s-loading-area-modify-collection{
+    text-align: center;
+}
+
+.list-group-item{
+    border: 0px !important;
+}
+@media(max-width: 767px) {
+    .form-inline {
+        display: none;
+    }
+    .filterHide {
+        display: none;
+    }
+    .form-inline button { 
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width: 450px) {
+    .add-padding-left{
+        padding: 0px !important;
+    }
+}
+
+.error{
+    border: 1px solid #FF0000 !important;
+}
+.b2s-network-auth-btn{
+    margin-left: 2px;
+    line-height: 2;
+}
+
+.b2s-network-item-auth-list-btn-delete{
+    line-height: 2;
+}
+
+.b2s-network-get-more-btn{
+    text-decoration: underline;
+}
+.b2s-network-auth-count{
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.b2s-sched-manager-title{
+    font-weight: 700;
+    line-height: 1.5;  
+    padding-right: 165px;
+}
+
+.b2s-sched-manager-time-area{
+    width: 150px;
+    margin-right: -35px;
+}
+
+.b2s-sched-manager-add-padding{
+    margin-right: -13px;
+}
+
+.b2s-add-padding-network-refresh{
+    padding: 4px 15px;
+}
+
+.b2s-sched-manager-best-time-info{
+    padding-left: 15px;
+    font-size: 12px;
+}
+
+.b2s-network-time-manager-area{
+    padding-right: 8px;
+}
+
+.b2s-add-padding-network-edit{
+    padding: 7px 4px;
+}
+.b2s-network-mandant-area{
+    margin-top: -7px !important;
+}
+
+.b2s-add-padding-network-delete{
+    padding: 4px 5px;
+}
+
+.b2s-sched-manager-day-area{
+    width: 150px;
+    padding-top: 2px;
+}
+
+.b2s-sched-manager-premium-area{
+    width: 195px;
+    padding-top: 5px;  
+}
+
+.b2s-settings-sched-item-input-time, .b2s-settings-sched-item-input-day{
+    max-width: 90px;
+}
+
+.b2s-network-mandant-select{
+    min-width: 200px;
+}
+
+.b2s-network-mandant-name{
+    font-size: 12px;
+    font-style: italic;
+    color: #777;
+    font-weight: normal;
+
+}
+
+.b2s-network-item-auth-list{
+    padding-top:6px;
+    font-size: 0.80rem !important;
+}
+
+.b2s-network-auth-list-info{
+    font-weight: 700;
+}
+
+.b2s-network-auth-list-info a {
+    text-decoration: underline;
+}
+
+.glyphicon-white{
+    color:#FFFFFF;
+}
+
+.b2s-network-item-auth-list-li{
+    border: 1px solid rgba(0,0,0,.1);
+    border-bottom: 0px;
+    line-height: 1.5;
+    padding: 6px;
+    margin-bottom: 0px !important;
+}
+
+ul.b2s-network-item-auth-list li:last-child{
+    border-bottom: 1px solid rgba(0,0,0,.1) !important;
+}
+
+.b2s-network-item-auth-type{
+    font-weight: 600;
+    line-height: 2;
+}
+
+.b2s-modify-board-and-group-network-modal-footer{
+    border: 0px !important;
+}
+
+.b2s-sched-manager-item-input-day {
+    color: #32373c;
+    display: inline-block;
+    vertical-align: middle;
+    font: 18px/1 Arial,sans-serif;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 0 2px
+        ;min-width: 28px;
+    text-align: center;
+    border: 0 !important;
+    width: 2% !important;
+    -webkit-appearance: none !important;
+    box-shadow: inset 0px 0px 0px rgba(0,0,0,0) !important;
+    margin: 0 !important;
+    background-color:white !important;
+}
+.b2s-sched-manager-item-input-day-btn-plus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    font: 23px/1 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+    color: #32373c
+}
+.b2s-sched-manager-item-input-day-btn-minus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    font: 21px/1 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    background-clip: padding-box;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+    color: #32373c
+}
+.b2s-text-middle{
+    vertical-align: middle;
+    font: 13px/1 Arial,sans-serif;
+}
+
+.b2s-label-warning-border-left{
+    border-left: 3px solid #FDBF45;
+}
+
+.b2s-label-info-border-left{
+    border-left: 3px solid #31708f;
+}
+
+.b2s-label-danger-border-left{
+    border-left: 3px solid #d9534f;
+}
+
+.b2s-label-success-border-left{
+    border-left: 3px solid #398439;
+}

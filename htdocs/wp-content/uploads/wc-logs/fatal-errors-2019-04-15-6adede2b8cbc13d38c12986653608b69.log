@@ -1,0 +1,11 @@
+2019-04-15T23:40:11+00:00 CRITICAL Uncaught Error: Class 'Access_Updater' not found in /opt/bitnami/apps/wordpress/htdocs/wp-content/plugins/types-access/types-access.php:150
+Stack trace:
+#0 /opt/bitnami/apps/wordpress/htdocs/wp-includes/class-wp-hook.php(286): taccess_on_activate(false)
+#1 /opt/bitnami/apps/wordpress/htdocs/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#2 /opt/bitnami/apps/wordpress/htdocs/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /opt/bitnami/apps/wordpress/htdocs/wp-admin/includes/plugin.php(598): do_action('activate_types-...', false)
+#4 /opt/bitnami/apps/wordpress/htdocs/wp-content/plugins/types/vendor/otgs/installer/includes/class-wp-installer.php(2057): activate_plugin('types-access/ty...')
+#5 /opt/bitnami/apps/wordpress/htdocs/wp-includes/class-wp-hook.php(286): WP_Installer->download_plugin_ajax_handler('')
+#6 /opt/bitnami/apps/wordpress/htdocs/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#7 /opt/bitnami/apps/wordpress/htdocs/wp-includes/plugin.php(453): in /opt/bitnami/apps/wordpress/htdocs/wp-content/plugins/types-access/types-access.php on line 150
+

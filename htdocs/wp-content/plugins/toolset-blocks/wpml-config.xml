@@ -1,0 +1,47 @@
+	<wpml-config>
+		<gutenberg-blocks>
+			<gutenberg-block type="toolset-blocks/star-rating" translate="0">
+			</gutenberg-block>
+			<gutenberg-block type="toolset-blocks/heading" translate="1">
+				<xpath>//h1</xpath>
+				<xpath>//h2</xpath>
+				<xpath>//h3</xpath>
+				<xpath>//h4</xpath>
+				<xpath>//h5</xpath>
+				<xpath>//h6</xpath>
+			</gutenberg-block>
+			<gutenberg-block type="toolset-blocks/button" translate="1">
+				<xpath>//span</xpath>
+			</gutenberg-block>
+			<gutenberg-block type="toolset-blocks/countdown" translate="1">
+				<xpath>//div/span[position() = 2]</xpath>
+				<xpath>//div[@class='tb-countdown__message']/span</xpath>
+				<xpath>//div/@data-countdown-redirect</xpath>
+			</gutenberg-block>
+			<gutenberg-block type="toolset-blocks/progress" translate="1">
+				<xpath>//div/svg/text</xpath>
+			</gutenberg-block>
+			<gutenberg-block type="toolset-blocks/audio" translate="1">
+				<xpath>//audio/@src</xpath>
+			</gutenberg-block>
+			<gutenberg-block type="toolset-blocks/video" translate="1">
+				<xpath>//video/@src</xpath>
+				<xpath>//video/@poster</xpath>
+			</gutenberg-block>
+			<gutenberg-block type="toolset-blocks/image" translate="1">
+				<xpath>//a/@href</xpath>
+				<xpath>//img/@src</xpath>
+				<xpath>//img/@alt</xpath>
+				<xpath>//figcaption</xpath>
+			</gutenberg-block>
+			<gutenberg-block type="toolset-blocks/field" translate="1">
+				<xpath>//span</xpath>
+			</gutenberg-block>
+            <gutenberg-block type="toolset-blocks/social-share" translate="1">
+                <xpath>//@data-shareurl</xpath>
+                <xpath>//@data-title</xpath>
+                <xpath>//@data-excerpt</xpath>
+                <xpath>//@data-image</xpath>
+            </gutenberg-block>
+	    </gutenberg-blocks>
+	</wpml-config>

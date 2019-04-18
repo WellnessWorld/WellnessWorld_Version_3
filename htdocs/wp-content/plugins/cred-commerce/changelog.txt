@@ -1,0 +1,58 @@
+Wordpress Plugin: 
+Toolset Forms Commerce, by OnTheGoSystems
+
+Changelog:
+
+1.8.1
+* Restored a broken API hook which got renamed on 1.7
+* Restored missing action icons in commerce settings for forms.
+* Fixed an error caused by using a deprecated core function.
+
+1.8
+* Updated references from CRED to Toolset Forms.
+* Updated documentation links to toolset.com.
+
+1.7
+* Fixed a compatibility issue with WooCommerce 3.2
+* Fixed an issue about notificationn on Order Payment status Change.
+
+1.6.1
+* Fixed a PHP compatible Notice with CRED 1.9.4
+
+1.6
+* Fixed an issue with Premium User Registration flow
+* Fixed PHP Notice:  Undefined index: order_on-hold
+* Fixed compatibility issue with WooCommerce 2.5 related to get_checkout_url and get_cart_url deprecated since 2.5
+
+1.5
+* Fixed compatibility issue with WooCommerce 3.1.0
+* Added compatibility to CRED 1.9.1 Notification Manager
+
+1.4
+* Fixing a bug with "Thank You Message" not displaying.
+* Minor bug fixes.
+
+1.3
+* Minor bug fixes.
+
+1.2
+* Added compatibility to CRED 1.8+
+
+1.1
+* Fixed an issue with the WPML translation of the Checkout and Thank-you messages.
+
+1.0
+* Added support for user subscriptions and integration with CRED user forms
+* Removed [cred_thankyou_message] shortcode and added support for thank you message text option
+* Fixed an issue regarding messages text escaping
+* Fixed a compatibility issue with Woocommerce 2.5.2
+
+0.9.4
+* Added support for using the slug of CRED forms in API functions (cred_commerce_after_send_notifications and cred_commerce_after_order_completed)
+
+0.9.3
+* Added cred_commerce_after_send_notifications hook for onOrderChange() function
+
+0.9
+* Initial release with CRED 1.1.4 support
+* Initial release, welcome to CRED Commerce!

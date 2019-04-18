@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for cred-form/inspector/inspector.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">cred-form/inspector</a> inspector.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">59.09% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>13/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">21.43% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>6/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">59.09% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>13/22</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * The Content Template block inspector component.
+ *
+ * An "Inspector" component is created that is used inside the Toolset Content Template block to handle all the functionality related
+ * to the controls on the Gutenberg editor sidebar.
+ *
+ * @since  2.3
+ */
+&nbsp;
+/**
+ * Block dependencies
+ */
+import CREDFormSelect from './cred-form-select';
+import { Select2 } from '@toolset/common';
+&nbsp;
+/**
+ * Internal block libraries
+ */
+import { __, sprintf } from '@wordpress/i18n';
+import { InspectorControls } from '@wordpress/editor';
+import { BaseControl, RadioControl, PanelBody } from '@wordpress/components';
+import { Component } from '@wordpress/element';
+&nbsp;
+/**
+ * Create an Inspector Controls wrapper Component
+ */
+export default class Inspector extends Component {
+	render() {
+		const {
+			attributes,
+			className,
+			onChangeCredForm,
+			onChangePostToEdit,
+			onChangeAnotherPostToEdit,
+			onChangeUserToEdit,
+			onChangeAnotherUserToEdit,
+			onChangeRelationshipFormType,
+			onChangeRelationshipParentItem,
+			onChangeRelationshipChildItem,
+			onChangeRelationshipParentItemSpecific,
+			onChangeRelationshipChildItemSpecific,
+		} = this.props;
+&nbsp;
+		const {
+			form,
+			formType,
+			formAction,
+			postToEdit,
+			anotherPostToEdit,
+			userToEdit,
+			anotherUserToEdit,
+			newPostForms,
+			editPostForms,
+			newUserForms,
+			editUserForms,
+			newRelationshipForms,
+			relationshipFormType,
+			relationshipParentItem,
+			relationshipChildItem,
+			relationshipParentItemSpecific,
+			relationshipChildItemSpecific,
+			relationshipData,
+		} = attributes;
+&nbsp;
+		let relationshipCreateLabel = '';
+		let relationshipCreateChildLabel = '';
+		let relationshipCreateChildSubLabel = '';
+		let relationshipCreateChildOptionCurrent = '';
+		let relationshipCreateChildOptionSpecific = '';
+		let relationshipCreateParentLabel = '';
+		let relationshipCreateParentSubLabel = '';
+		let relationshipCreateParentOptionCurrent = '';
+		let relationshipCreateParentOptionSpecific = '';
+&nbsp;
+		<span class="missing-if-branch" title="if path not taken" >I</span>if ( Object.keys( relationshipData ).length ) {
+			// translators: %1 is the name of a post type name (i.e. Flight) - %2 is also a post type name but with an indefinite article (i.e. a Airport) - %3 is the name of the relationship with a indefinite article (i.e. a Departure)
+<span class="cstat-no" title="statement not covered" >			relationshipCreateLabel = sprintf( __( 'Connect between any %s and %s as %s' ), relationshipData.parent.labelSingular, relationshipData.child.labelSingularPrefixed, relationshipData.labelSingularPrefixed );</span>
+			// translators: %1 is the name of a post type name with an indefinite article (i.e. Airport) - %2 is also a post type name but without an indefinite article (i.e. a Flight) - %3 is the name of the relationship with a indefinite article (i.e. a Departure)
+<span class="cstat-no" title="statement not covered" >			relationshipCreateChildLabel = sprintf( __( 'Connect %s to a given %s as %s' ), relationshipData.child.labelSingularPrefixed, relationshipData.parent.labelSingular, relationshipData.labelSingularPrefixed );</span>
+			// translators: %1 and %2 are post type name (i.e. Airport or Flight)
+<span class="cstat-no" title="statement not covered" >			relationshipCreateChildSubLabel = sprintf( __( '%s to add %s to' ), relationshipData.parent.labelSingular, relationshipData.child.labelSingular );</span>
+			// translators: %1 is post type name (i.e. Airport)
+<span class="cstat-no" title="statement not covered" >			relationshipCreateChildOptionCurrent = sprintf( __( 'Use the current %s' ), relationshipData.parent.labelSingular );</span>
+			// translators: %1 is post type name (i.e. Airport)
+<span class="cstat-no" title="statement not covered" >			relationshipCreateChildOptionSpecific = sprintf( __( 'Use a specific %s' ), relationshipData.parent.labelSingular );</span>
+			// translators: %1 is the name of a post type name with an indefinite article (i.e. Airport) - %2 is also a post type name but without an indefinite article (i.e. a Flight) - %3 is the name of the relationship with a indefinite article (i.e. a Departure)
+<span class="cstat-no" title="statement not covered" >			relationshipCreateParentLabel = sprintf( __( 'Connect %s to a given %s as %s' ), relationshipData.parent.labelSingularPrefixed, relationshipData.child.labelSingular, relationshipData.labelSingularPrefixed );</span>
+			// translators: %1 and %2 are post type name (i.e. Airport or Flight)
+<span class="cstat-no" title="statement not covered" >			relationshipCreateParentSubLabel = sprintf( __( '%s to add %s to' ), relationshipData.child.labelSingular, relationshipData.parent.labelSingular );</span>
+			// translators: %1 is post type name (i.e. Airport)
+<span class="cstat-no" title="statement not covered" >			relationshipCreateParentOptionCurrent = sprintf( __( 'Use the current %s' ), relationshipData.child.labelSingular );</span>
+			// translators: %1 is post type name (i.e. Airport)
+<span class="cstat-no" title="statement not covered" >			relationshipCreateParentOptionSpecific = sprintf( __( 'Use a specific %s' ), relationshipData.child.labelSingular );</span>
+		}
+&nbsp;
+		return (
+			&lt;InspectorControls&gt;
+				&lt;div className={ className }&gt;
+					&lt;PanelBody title={ __( 'Toolset Form' ) }&gt;
+						&lt;BaseControl&gt;
+							&lt;CREDFormSelect
+								attributes={
+									{
+										newPostForms: newPostForms,
+										editPostForms: editPostForms,
+										newUserForms: newUserForms,
+										editUserForms: editUserForms,
+										newRelationshipForms: newRelationshipForms,
+										form: form,
+									}
+								}
+								className="components-select-control__input"
+								onChangeCredForm={ onChangeCredForm }
+							/&gt;
+						&lt;/BaseControl&gt;
+						{
+							'edit' === formAction &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'post' === formType </span>?
+<span class="branch-0 cbranch-no" title="branch not covered" >								[</span>
+									&lt;RadioControl
+										key="postToEdit"
+										label={ __( 'Post to edit' ) }
+										selected={ postToEdit }
+										onChange={ onChangePostToEdit }
+										options={
+											[
+												{ value: 'current', label: __( 'The current post' ) },
+												{ value: 'another', label: __( 'Another post' ) },
+											]
+										}
+									/&gt;,
+									// @todo Switch the custom endpoint with the native one, once it's available.
+									// The endpoint used on the autocomplete component below to get the post according to a
+									// search keyword, needs to be changed with the native WP REST API endpoint (as soon as
+									// it's available).
+									// https://github.com/WordPress/gutenberg/issues/2084
+									// https://core.trac.wordpress.org/ticket/39965
+									'another' === postToEdit ?
+										&lt;BaseControl label={ __( 'Post' ) } key="another-post-select"&gt;
+											&lt;Select2
+												onChange={ onChangeAnotherPostToEdit }
+												restInfo={
+													{
+														base: '/toolset/v2/search-posts',
+														args: {
+															search: '%s',
+														},
+													}
+												}
+												value={ anotherPostToEdit }
+											/&gt;
+										&lt;/BaseControl&gt; :
+										null,
+								] :
+								null
+						}
+						{
+							'edit' === formAction &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'user' === formType </span>?
+<span class="branch-0 cbranch-no" title="branch not covered" >								[</span>
+									&lt;RadioControl
+										key="userToEdit"
+										label={ __( 'User to edit' ) }
+										selected={ userToEdit }
+										onChange={ onChangeUserToEdit }
+										options={
+											[
+												{ value: 'current', label: __( 'The current logged in user' ) },
+												{ value: 'another', label: __( 'Another user' ) },
+											]
+										}
+									/&gt;,
+									'another' === userToEdit ?
+										&lt;BaseControl label={ __( 'User' ) } key="another-user-select"&gt;
+											&lt;Select2
+												onChange={ onChangeAnotherUserToEdit }
+												restInfo={
+													{
+														base: '/wp/v2/users',
+														args: {
+															search: '%s',
+															per_page: 20,
+															orderby: 'name',
+															context: 'edit',
+														},
+													}
+												}
+												value={ anotherUserToEdit }
+											/&gt;
+										&lt;/BaseControl&gt; :
+										null,
+								] :
+								null
+						}
+						{
+							'relationship' === formType ?
+<span class="branch-0 cbranch-no" title="branch not covered" >								[</span>
+									&lt;RadioControl
+										key="relationshipFormType"
+										// translators: The form can be used to create a new relationship or edit or ...
+										label={ __( 'What should the form do?' ) }
+										selected={ relationshipFormType }
+										onChange={ onChangeRelationshipFormType }
+										options={
+											[
+												{ value: 'create', label: relationshipCreateLabel },
+												{ value: 'createChild', label: relationshipCreateChildLabel },
+												{ value: 'createParent', label: relationshipCreateParentLabel },
+											]
+										}
+									/&gt;,
+									'createChild' === relationshipFormType ?
+										&lt;RadioControl
+											key="relationshipChildItem"
+											label={ relationshipCreateChildSubLabel }
+											selected={ relationshipParentItem }
+											onChange={ onChangeRelationshipParentItem }
+											options={
+												[
+													{ value: '$current', label: relationshipCreateChildOptionCurrent },
+													{ value: 'specific', label: relationshipCreateChildOptionSpecific },
+												]
+											}
+										/&gt; :
+										null,
+									'createChild' === relationshipFormType &amp;&amp; 'specific' === relationshipParentItem ?
+										&lt;Select2
+											onChange={ onChangeRelationshipParentItemSpecific }
+											restInfo={
+												{
+													base: '/toolset/v2/search-posts',
+													args: {
+														search: '%s',
+														post_type: relationshipData.parent.type,
+													},
+												}
+											}
+											value={ relationshipParentItemSpecific }
+										/&gt; :
+										null,
+									'createParent' === relationshipFormType ?
+										&lt;RadioControl
+											key="relationshipParentItem"
+											label={ relationshipCreateParentSubLabel }
+											selected={ relationshipChildItem }
+											onChange={ onChangeRelationshipChildItem }
+											options={
+												[
+													{ value: '$current', label: relationshipCreateParentOptionCurrent },
+													{ value: 'specific', label: relationshipCreateParentOptionSpecific },
+												]
+											}
+										/&gt; :
+										null,
+									'createParent' === relationshipFormType &amp;&amp; 'specific' === relationshipChildItem ?
+										&lt;Select2
+											onChange={ onChangeRelationshipChildItemSpecific }
+											restInfo={
+												{
+													base: '/toolset/v2/search-posts',
+													args: {
+														search: '%s',
+														post_type: relationshipData.child.type,
+													},
+												}
+											}
+											value={ relationshipChildItemSpecific }
+										/&gt; :
+										null,
+								] :
+								null
+						}
+					&lt;/PanelBody&gt;
+				&lt;/div&gt;
+			&lt;/InspectorControls&gt;
+		);
+	}
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 24 2018 16:22:41 GMT+0100 (Hora estándar romance)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

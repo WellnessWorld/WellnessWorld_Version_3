@@ -1,0 +1,4 @@
+"ID","user_login","user_pass","user_nicename","user_email","user_url","user_registered","display_name","first_name","last_name","user_status","roles"
+"2391","infowellness","$P$BEivTnm0flqWf8O8oq4f68Ghh5y9b60","infowellness","info@wellness.world","","2017-08-23 13:07:53","infowellness","info","wellness","","administrator"
+"2733","Patrick","$P$Bi7KD7ZjNfsFl7xazZDVYhSWFpqkX7/","patrick","sales@artbypatrick.ca","","2018-08-09 13:01:46","Patrick Hardy","Patrick","Hardy","","administrator"
+"7","renelandry","$P$BppJ87/DXL7E.DB.97sd9lPc2UMMtX/","renelandry","rene@wellness.world","","2017-03-28 10:59:49","Rene Landry","Rene","Landry","","administrator"

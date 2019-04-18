@@ -1,0 +1,12 @@
+body .thumbnail{
+    border: none;
+}
+.b2s-container p{
+    text-align: center;
+}
+@media(max-width: 768px)
+{
+    .del-padding-right{
+        margin-right: 10px;
+    }
+}

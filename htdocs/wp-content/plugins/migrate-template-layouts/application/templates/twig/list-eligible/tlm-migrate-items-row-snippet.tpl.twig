@@ -1,0 +1,48 @@
+{#
+    <tr> element for Table with content layouts that are in the migration process.
+#}
+
+{% for item in items %}
+    {% if is_wpml() and item.translate %}
+    <tr class="edit format-standard entry" data-translate="post_{{ item.translate }}">
+    {% else %}
+        <tr class="edit format-standard entry">
+    {% endif %}
+    <td class="tlm-post-title"><a
+                href="{{ admin_url( "post.php?post=#{ item.id }&action=edit" ) }}">{{ item.post_title }}</a>
+        <input type="hidden" class="input-post-title" name="post_title_{{ item.id }}" value="{{ item.post_title }}"/>
+        <input type="hidden" class="input-post-id" name="post_id_{{ item.id }}" value="{{ item.id }}"/>
+        <div class="tlm-row-actions">
+            <span><a href="{{ admin_url( "post.php?post=#{ item.id }&action=edit" ) }}"
+                     class="tlm-post-title">{{ __('Edit') }}</a></span> | <span><a href="{{ get_permalink( item.id ) }}"
+                                                                                   class="tlm-post-title">{{ __('View') }}</a></span>
+        </div>
+    </td>
+    <td>{{ item.post_type }}
+        <input class="tlm-post_type-input" type="hidden" name="post_type_{{ item.id }}" value="{{ item.post_type }}"/>
+    </td>
+    <td>
+        <a href="{{ admin_url( "admin.php?page=dd_layouts_edit&layout_id=#{ item.id }&action=edit" ) }}">{{ item.layout_name }}</a>
+        <input type="hidden" name="content_layout_{{ item.id }}" value="{{ item.layout_slug }}"/>
+    </td>
+    <td>
+        <a href="{{ admin_url( "admin.php?page=dd_layouts_edit&layout_id=#{ item.template }&action=edit" ) }}">{{ item.template_name }}</a>
+        <input type="hidden" name="template_layout_{{ item.id }}" value="{{ item.template }}"/>
+    </td>
+    {% if is_wpml() %}
+        <td>
+            <a href="{{ admin_url( "admin.php?page=dd_layouts_edit&layout_id=#{ item.template }&action=edit" ) }}">{{ get_lang( item.id ) }}</a>
+        </td>
+    {% endif %}
+    <td>
+        <input {{ item.disabled }} id="button_{{ item.id }}" type="submit"
+               class="button button-secondary button-small hide-if-no-js tlm-cancel-migration js-tlm-cancel-migration"
+               value="{{ __('Cancel') }}"/>
+    </td>
+    <td>
+        <input id="button_{{ item.id }}" type="submit"
+               class="button button-primary button-small hide-if-no-js tlm-finalize-migration js-tlm-finalize-migration"
+               value="{{ __('Finish') }}"/>
+    </td>
+    </tr>
+{% endfor %}

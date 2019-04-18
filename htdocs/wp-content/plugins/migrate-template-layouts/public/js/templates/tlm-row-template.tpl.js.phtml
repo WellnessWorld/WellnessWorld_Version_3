@@ -1,0 +1,27 @@
+<script type="text/html" id="tlm-js-row-template">
+		<th scope="row" class="check-column">
+			<input id="cb-checkbox-{{{ item.post_id }}}" type="checkbox" name="posts[]" value="{{{ item.post_id }}}">
+		</th>
+		<td class="tlm-post-title"><a href="post.php?post={{{ item.post_id }}}&action=edit">{{{item.post_title }}}</a>
+		<input type="hidden" name="post_title_{{{ item.post_id }}}" value="{{{ item.post_title }}}"/>
+		<input type="hidden" name="post_name_{{{ item.post_id }}}" value="{{{ item.post_slug }}}"/>
+		<div class="tlm-row-actions">
+			<span><a href="post.php?post={{{ item.post_id }}}&action=edit" class="tlm-post-title">Edit</a></span> | <span><a href="{{{ item.permalink }}}" class="tlm-post-title">View</a></span>
+	</div>
+</td>
+<td>{{{item.post_type }}}
+	<input class="tlm-post_type-input" type="hidden" name="post_type_{{{ item.post_id }}}" value="{{{ item.post_type }}}"/>
+</td>
+<td><a href="admin.php?page=dd_layouts_edit&layout_id=#{{{ item.current_layout_id }}}&action=edit">{{{item.current_layout_title }}}</a>
+<input type="hidden" name="current_layout_{{{ item.post_id }}}" value="{{{ item.current_layout_id }}}"/>
+</td>
+<td>
+	<select class="tlm-template-selector" name="template_{{{ item.post_id }}}" id="cb-select-{{{ item.post_id }}}">
+		<option value="0">-- Not selected --</option>
+		<# _.each( item.eligible_templates, function( template ){ #>
+		<option {{{ template.selected }}} value="{{{ template.id }}}">{{{ template.title }}}</option>
+		<# }); #>
+		<option value="-1">No template layout</option>
+	</select>
+</td>
+</script>

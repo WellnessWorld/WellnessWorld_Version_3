@@ -1,0 +1,2 @@
+
+(function($){$(function(){new FLBuilderCountdown({id:'59e4b4ca6abcb',time:'2017-10-22T16:00:00-03:00',type:'circle',});});})(jQuery);jQuery(function($){$(function(){$('.fl-node-59e4b53e9ad81 .fl-photo-img').on('mouseenter',function(e){$(this).data('title',$(this).attr('title')).removeAttr('title');}).on('mouseleave',function(e){$(this).attr('title',$(this).data('title')).data('title',null);});});});

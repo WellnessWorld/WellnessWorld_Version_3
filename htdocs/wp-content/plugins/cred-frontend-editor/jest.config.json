@@ -1,0 +1,37 @@
+{
+  "testMatch": [
+    "<rootDir>/tests/jest/editor-blocks/**/*.test.js"
+  ],
+  "collectCoverageFrom": [
+    "<rootDir>/public_src/js/**/*.{js,jsx}"
+  ],
+  "moduleFileExtensions": [
+    "js",
+    "jsx"
+  ],
+  "moduleDirectories": [
+    "node_modules",
+    "public_src/js"
+  ],
+  "setupFiles": [
+    "<rootDir>/node_modules/@wordpress/jest-preset-default/scripts/setup-globals.js",
+    "<rootDir>/tests/jest/bootstrap.js",
+    "<rootDir>/tests/jest/helper/globals.js"
+  ],
+  "roots": [
+    "<rootDir>/tests/jest"
+  ],
+  "moduleNameMapper": {
+    "\\.(css|scss)$": "<rootDir>/tests/jest/__mocks__/styleMock.js",
+    "\\.(gif|ttf|eot|svg)$": "<rootDir>/tests/jest/__mocks__/fileMock.js",
+    "editorBlocks/(.*)$": "<rootDir>/public_src/js/editor-blocks/$1",
+    "tests/(.*)$": "<rootDir>/tests/jest/$1",
+    "@wordpress\\/(.*)": "<rootDir>/node_modules/@wordpress/$1",
+    "@cred/cred_form_block_strings": "<rootDir>/tests/jest/__mocks__/cred_form_block_strings.js"
+  },
+  "transformIgnorePatterns": [
+    "node_modules/(?!simple-html-tokenizer)"
+  ],
+  "collectCoverage": true,
+  "coverageReporters": ["json", "html"]
+}

@@ -1,0 +1,89 @@
+# Copyright (C) 2018 Theme My Login reCAPTCHA
+# This file is distributed under the same license as the Theme My Login reCAPTCHA package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Theme My Login reCAPTCHA 1.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/theme-my-login-recaptcha\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2018-06-22T15:40:19-04:00\n"
+"PO-Revision-Date: 2018-06-22T15:40:19-04:00\n"
+"X-Domain: theme-my-login-recaptcha\n"
+
+#: functions.php:109
+msgid "<strong>ERROR</strong>: Invalid reCAPTCHA secret key."
+msgstr ""
+
+#: functions.php:114
+msgid "<strong>ERROR</strong>: Please check the box to prove that you are not a robot."
+msgstr ""
+
+#: functions.php:119
+msgid "<strong>ERROR</strong>: The reCAPTCHA request is invalid or malformed."
+msgstr ""
+
+#: functions.php:126
+msgid "<strong>ERROR</strong>: Unable to reach the reCAPTCHA server."
+msgstr ""
+
+#: tml-recaptcha.php:92
+#: tml-recaptcha.php:148
+msgid "reCAPTCHA"
+msgstr ""
+
+#: tml-recaptcha.php:147
+msgid "Theme My Login reCAPTCHA Settings"
+msgstr ""
+
+#: admin.php:41
+msgid "Site Key"
+msgstr ""
+
+#: admin.php:52
+msgid "Secret Key"
+msgstr ""
+
+#: admin.php:63
+msgid "Theme"
+msgstr ""
+
+#: admin.php:69
+msgctxt "recaptcha theme"
+msgid "Light"
+msgstr ""
+
+#: admin.php:70
+msgctxt "recaptcha theme"
+msgid "Dark"
+msgstr ""
+
+#: admin.php:77
+msgid "Show On Forms"
+msgstr ""
+
+#: admin.php:81
+msgid "Show on forms"
+msgstr ""
+
+#. Plugin Name of the plugin
+msgid "Theme My Login reCAPTCHA"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://thememylogin.com/extensions/recaptcha"
+msgstr ""
+
+#. Description of the plugin
+msgid "Adds reCAPTCHA support to Theme My Login."
+msgstr ""
+
+#. Author of the plugin
+msgid "Theme My Login"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://thememylogin.com"
+msgstr ""

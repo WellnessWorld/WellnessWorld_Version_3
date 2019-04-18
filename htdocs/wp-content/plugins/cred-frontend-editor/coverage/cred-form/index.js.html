@@ -1,0 +1,866 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for cred-form/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\prettify.css" />
+    <link rel="stylesheet" href="..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\index.html">All files</a> / <a href="index.html">cred-form</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>76/80</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>36/48</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.44% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>17/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.94% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>75/79</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Handles the creation and the behavior of the Toolset Content Template block.
+ *
+ * @since  2.3
+ */
+&nbsp;
+/**
+ * Block dependencies
+ */
+import icon from './icon';
+import Inspector from './inspector/inspector';
+import CREDFormSelect from './inspector/cred-form-select';
+import CREDFormPreview from './cred-form-preview';
+import './styles/editor.scss';
+&nbsp;
+/**
+ * Internal block libraries
+ */
+import { __ } from '@wordpress/i18n';
+import { Placeholder } from '@wordpress/components';
+import { RawHTML } from '@wordpress/element';
+// Defined in webpack externals.
+import i18n from '@cred/cred_form_block_strings';
+&nbsp;
+export const name = i18n.blockName;
+&nbsp;
+/**
+ * Forms are grouped by Form type (Post, User and Relationship), and each of them by Editing or Adding.
+ * This funcion search a form by its `post_name`
+ *
+ * @param {Object} forms An object containing the forms: `i18n.publishedForms`
+ * @param {String} formName The name of the form: `post_name`
+ * @return {Object} An object containing form data
+ */
+const getFormByFormName = ( forms, formName ) =&gt; {
+	if ( forms instanceof Array ) {
+		const selectedItem = forms.filter( formItem =&gt; formItem.post_name === formName );
+		return selectedItem.length ? <span class="branch-0 cbranch-no" title="branch not covered" >selectedItem[ 0 ] </span>: null;
+	}
+	let result = null;
+	Object.keys( forms ).forEach( key =&gt; {
+		result = result || getFormByFormName( forms[ key ], formName );
+		return result;
+	} );
+	return result;
+};
+&nbsp;
+export const settings = {
+	title: __( 'Form' ),
+	description: __( 'Add a Toolset Form to the editor.' ),
+	category: i18n.blockCategory,
+	icon: icon.blockIcon,
+	keywords: [
+		__( 'Toolset' ),
+		__( 'Form' ),
+		__( 'Shortcode' ),
+	],
+&nbsp;
+	edit: props =&gt; {
+		const onChangeCredForm = ( event ) =&gt; {
+			const formInfo = JSON.parse( event.target.value );
+			props.setAttributes( { form: event.target.value } );
+			props.setAttributes( { formType: formInfo.formType } );
+			props.setAttributes( { formAction: formInfo.formAction } );
+		};
+&nbsp;
+		const onChangePostToEdit = ( value ) =&gt; {
+			props.setAttributes( { postToEdit: value } );
+		};
+&nbsp;
+		const onChangeAnotherPostToEdit = ( value ) =&gt; {
+			props.setAttributes( { anotherPostToEdit: value } );
+		};
+&nbsp;
+		const onChangeUserToEdit = ( value ) =&gt; {
+			props.setAttributes( { userToEdit: value } );
+		};
+&nbsp;
+		const onChangeAnotherUserToEdit = ( value ) =&gt; {
+			if ( null === value ) {
+				value = '';
+			}
+			props.setAttributes( { anotherUserToEdit: value } );
+		};
+&nbsp;
+		const onChangeRelationshipFormType = ( value ) =&gt; {
+			props.setAttributes( { relationshipFormType: value } );
+		};
+&nbsp;
+		const onChangeRelationshipParentItem = ( value ) =&gt; {
+			props.setAttributes( { relationshipParentItem: value } );
+		};
+&nbsp;
+		const onChangeRelationshipChildItem = ( value ) =&gt; {
+			props.setAttributes( { relationshipChildItem: value } );
+		};
+&nbsp;
+		const onChangeRelationshipParentItemSpecific = ( option ) =&gt; {
+			props.setAttributes( { relationshipParentItemSpecific: option } );
+		};
+&nbsp;
+		const onChangeRelationshipChildItemSpecific = ( option ) =&gt; {
+			props.setAttributes( { relationshipChildItemSpecific: option } );
+		};
+&nbsp;
+		const assignFormTypeAndAction = ( forms, type, action ) =&gt; {
+			forms.map( ( item ) =&gt; {
+				item.formType = type;
+				item.formAction = action;
+				return item;
+			} );
+&nbsp;
+			return forms;
+		};
+&nbsp;
+		/**
+		 * When selecting a relationship, extra data must be fetched and added for using in the Inspector
+		 *
+		 * @param {object} data Extra data.
+		 */
+		const onUpdateRelationshipData = <span class="fstat-no" title="function not covered" >da</span>ta =&gt; {
+<span class="cstat-no" title="statement not covered" >			props.setAttributes( { relationshipData: data } );</span>
+		};
+&nbsp;
+		const newPostForms = assignFormTypeAndAction( i18n.publishedForms.postForms.new, 'post', 'new' );
+		const editPostForms = assignFormTypeAndAction( i18n.publishedForms.postForms.edit, 'post', 'edit' );
+		const newUserForms = assignFormTypeAndAction( i18n.publishedForms.userForms.new, 'user', 'new' );
+		const editUserForms = assignFormTypeAndAction( i18n.publishedForms.userForms.edit, 'user', 'edit' );
+		const newRelationshipForms = assignFormTypeAndAction( i18n.publishedForms.relationshipForms.new, 'relationship', 'new' );
+		const relationshipData = !! props.attributes.relationshipData ? <span class="branch-0 cbranch-no" title="branch not covered" >props.attributes.relationshipData.relationship </span>: {};
+		// props.attributes.form has not the same value that the select option, so it needs to get it again.
+		const formData = !! props.attributes.form ? <span class="branch-0 cbranch-no" title="branch not covered" >JSON.parse( props.attributes.form ) </span>: {};
+		const formValue = JSON.stringify( getFormByFormName( i18n.publishedForms, formData.post_name || '' ) );
+&nbsp;
+		return [
+			!! (
+				props.focus ||
+<span class="branch-1 cbranch-no" title="branch not covered" >				props.isSelected</span>
+			) &amp;&amp; (
+				&lt;Inspector
+					key="wpv-gutenberg-cred-form-block-render-inspector"
+					className={ 'wp-block-toolset-cred-form-inspector' }
+					attributes={
+						{
+							newPostForms: newPostForms,
+							editPostForms: editPostForms,
+							newUserForms: newUserForms,
+							editUserForms: editUserForms,
+							newRelationshipForms: newRelationshipForms,
+							form: formValue,
+							formType: props.attributes.formType,
+							formAction: props.attributes.formAction,
+							postToEdit: props.attributes.postToEdit,
+							anotherPostToEdit: props.attributes.anotherPostToEdit,
+							userToEdit: props.attributes.userToEdit,
+							anotherUserToEdit: props.attributes.anotherUserToEdit,
+							relationshipFormType: props.attributes.relationshipFormType,
+							relationshipParentItem: props.attributes.relationshipParentItem,
+							relationshipChildItem: props.attributes.relationshipChildItem,
+							relationshipParentItemSpecific: props.attributes.relationshipParentItemSpecific,
+							relationshipChildItemSpecific: props.attributes.relationshipChildItemSpecific,
+							relationshipData: relationshipData,
+						}
+					}
+					onChangeCredForm={ onChangeCredForm }
+					onChangePostToEdit={ onChangePostToEdit }
+					onChangeUserToEdit={ onChangeUserToEdit }
+					onChangeAnotherPostToEdit={ onChangeAnotherPostToEdit }
+					onChangeAnotherUserToEdit={ onChangeAnotherUserToEdit }
+					onChangeRelationshipFormType={ onChangeRelationshipFormType }
+					onChangeRelationshipParentItem={ onChangeRelationshipParentItem }
+					onChangeRelationshipChildItem={ onChangeRelationshipChildItem }
+					onChangeRelationshipParentItemSpecific={ onChangeRelationshipParentItemSpecific }
+					onChangeRelationshipChildItemSpecific={ onChangeRelationshipChildItemSpecific }
+				/&gt;
+			),
+			(
+				! props.attributes.form ?
+					&lt;Placeholder
+						key="cred-form-block-placeholder"
+						className={ 'wp-block-toolset-cred-form' }
+					&gt;
+						&lt;div className="wp-block-toolset-cred-form-placeholder"&gt;
+							{ icon.blockPlaceholder }
+							&lt;h2&gt;{ __( 'Toolset Form' ) }&lt;/h2&gt;
+							&lt;CREDFormSelect
+								attributes={
+									{
+										newPostForms: newPostForms,
+										editPostForms: editPostForms,
+										newUserForms: newUserForms,
+										editUserForms: editUserForms,
+										newRelationshipForms: newRelationshipForms,
+										form: '',
+									}
+								}
+								className={ 'components-select-control__input' }
+								onChangeCredForm={ onChangeCredForm }
+							/&gt;
+						&lt;/div&gt;
+					&lt;/Placeholder&gt; :
+<span class="branch-1 cbranch-no" title="branch not covered" >					&lt;CREDFormPreview</span>
+						key="toolset-cred-form-gutenberg-block-preview"
+						className={ `${ props.className } wp-block-toolset-cred-form-preview` }
+						attributes={
+							{
+								form: JSON.parse( props.attributes.form ),
+							}
+						}
+						onUpdateRelationshipData={ onUpdateRelationshipData }
+					/&gt;
+			),
+		];
+	},
+	save: ( props ) =&gt; {
+		let form = props.attributes.form || '';
+		let post = '',
+			user = '',
+			relationship = '',
+			shortcodeStart = '[cred-form';
+&nbsp;
+		const shortcodeEnd = ']';
+&nbsp;
+		if ( ! form.length ) {
+			return null;
+		}
+		form = JSON.parse( form );
+&nbsp;
+		if (
+			'post' === props.attributes.formType &amp;&amp;
+			'edit' === props.attributes.formAction &amp;&amp;
+			'another' === props.attributes.postToEdit &amp;&amp;
+			props.attributes.anotherPostToEdit
+		) {
+			post = `post="${ props.attributes.anotherPostToEdit.value }" `;
+		}
+&nbsp;
+		if ( 'user' === props.attributes.formType ) {
+			shortcodeStart = '[cred_user_form';
+			<span class="missing-if-branch" title="else path not taken" >E</span>if (
+				'edit' === props.attributes.formAction &amp;&amp;
+				'another' === props.attributes.userToEdit &amp;&amp;
+				!! props.attributes.anotherUserToEdit &amp;&amp;
+				!! props.attributes.anotherUserToEdit.value
+			) {
+				user = `user="${ props.attributes.anotherUserToEdit.value }" `;
+			}
+		}
+&nbsp;
+		if ( 'relationship' === props.attributes.formType ) {
+			shortcodeStart = '[cred-relationship-form';
+&nbsp;
+			<span class="missing-if-branch" title="else path not taken" >E</span>if ( 'createParent' === props.attributes.relationshipFormType ) {
+				const parentItem = 'specific' === props.attributes.relationshipChildItem ? <span class="branch-0 cbranch-no" title="branch not covered" >props.attributes.relationshipChildItemSpecific.value </span>: props.attributes.relationshipChildItem;
+				relationship += `child_item="${ parentItem }" `;
+			} else <span class="cstat-no" title="statement not covered" >if ( 'createChild' === props.attributes.relationshipFormType ) {</span>
+				const parentItem = <span class="cstat-no" title="statement not covered" >'specific' === props.attributes.relationshipParentItem ? props.attributes.relationshipParentItemSpecific.value : props.attributes.relationshipParentItem;</span>
+<span class="cstat-no" title="statement not covered" >				relationship += `parent_item="${ parentItem }" `;</span>
+			}
+			post = '';
+		}
+&nbsp;
+		form = ' form="' + form.post_name + '" ';
+&nbsp;
+		return &lt;RawHTML&gt;{ shortcodeStart + form + post + user + relationship + shortcodeEnd }&lt;/RawHTML&gt;;
+	},
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 24 2018 16:22:41 GMT+0100 (Hora estándar romance)
+</div>
+</div>
+<script src="..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\sorter.js"></script>
+</body>
+</html>

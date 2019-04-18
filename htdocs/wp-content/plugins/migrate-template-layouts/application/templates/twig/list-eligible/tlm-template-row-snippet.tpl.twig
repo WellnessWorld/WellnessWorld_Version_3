@@ -1,0 +1,31 @@
+{#
+    <tr> element for Table with content layouts that can be migrated to templated layouts.
+#}
+
+{% for item in items %}
+    <tr class="edit format-standard entry">
+        <th scope="row" class="check-column">
+            <input id="cb-checkbox-{{ item.id }}" type="checkbox" name="posts[]" value="{{ item.id }}">
+        </th>
+        <td class="tlm-post-title"><a href="{{ admin_url( "post.php?post=#{ item.id }&action=edit" ) }}">{{ item.post_title }}</a>
+            <input type="hidden" name="post_title_{{ item.id }}" value="{{ item.post_title }}"/>
+            <input type="hidden" name="post_name_{{ item.id }}" value="{{ item.post_name }}"/>
+            <div class="tlm-row-actions">
+                <span><a href="{{ admin_url( "post.php?post=#{ item.id }&action=edit" ) }}" class="tlm-post-title">{{ __('Edit') }}</a></span> | <span><a href="{{ get_permalink( item.id) }}" class="tlm-post-title">{{ __('View') }}</a></span>
+            </div>
+        </td>
+        <td>{{ item.post_type }}
+            <input class="tlm-post_type-input" type="hidden" name="post_type_{{ item.id }}" value="{{ item.post_type }}"/>
+        </td>
+        <td><a href="{{ admin_url( "admin.php?page=dd_layouts_edit&layout_id=#{ item.current_layout_id }&action=edit" ) }}">{{ item.current_layout_title }}</a>
+            <input type="hidden" name="current_layout_{{ item.id }}" value="{{ item.current_layout_id }}"/>
+        </td>
+        <td>
+            <select class="tlm-template-selector" name="template_{{ item.id }}" id="cb-select-{{ item.id }}">
+                <option value="0">{{ __( '-- Not selected --', 'ddl-layouts' ) }}</option>
+                {% include '/list-eligible/tlm-template-option-snippet.tpl.twig' %}
+                <option value="-1">{{ __( 'No template layout', 'ddl-layouts' ) }}</option>
+            </select>
+        </td>
+    </tr>
+{% endfor %}

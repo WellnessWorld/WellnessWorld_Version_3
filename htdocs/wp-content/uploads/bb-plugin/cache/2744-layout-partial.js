@@ -1,0 +1,2 @@
+
+(function($){$(function(){new FLBuilderNumber({id:'58d77abaa7f43',layout:'bars',type:'standard',number:3000,max:3000,speed:1000,delay:1,format:{decimal:'.',thousands_sep:','}});});})(jQuery);(function($){$(function(){new FLBuilderNumber({id:'58d77abaa7f7a',layout:'bars',type:'standard',number:10000,max:10000,speed:1000,delay:1.5,format:{decimal:'.',thousands_sep:','}});});})(jQuery);(function($){$(function(){new FLBuilderNumber({id:'58d77abaa7f0b',layout:'bars',type:'standard',number:12500,max:12500,speed:1000,delay:2,format:{decimal:'.',thousands_sep:','}});});})(jQuery);

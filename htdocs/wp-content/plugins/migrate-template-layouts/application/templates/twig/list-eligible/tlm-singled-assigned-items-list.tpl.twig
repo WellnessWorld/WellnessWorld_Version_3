@@ -1,0 +1,50 @@
+{#
+    Table with content layouts that can be migrated to templated layouts.
+#}
+
+<div class="wrap">
+	<h2>{{ __( 'Pages and posts using single page layout', 'ddl-layouts' )}}</h2>
+
+	{% if items|length > 0 %}
+
+        <p>{{ __( 'Following is a list of pages and posts, which are using single page layout. Select the page(s) / post(s) you want to apply content layouts.', 'ddl-layouts' )}}</p>
+
+	<form action="{{ admin_url }}" method="post">
+
+		<table class="wp-list-table widefat fixed striped posts" id="tlm-items-list-table">
+			<thead>
+			<tr>
+				<th class="tlm-column-first"><input class="cb-select-all" type="checkbox" value="all"></th>
+				<th scope="col" class="manage-column">{{ __( 'Title', 'ddl-layouts')}}</th>
+				<th scope="col" class="manage-column">{{ __( 'Post type', 'ddl-layouts')}}</th>
+				<th scope="col" class="manage-column">{{ __( 'Currently assigned Layout', 'ddl-layouts')}}</th>
+				<th scope="col" class="manage-column">{{ __( 'Template Layout to assign', 'ddl-layouts')}}</th>
+			</tr>
+			</thead>
+			<tbody id="tlm-items-list-table-body">
+				{% include '/list-eligible/tlm-template-row-snippet.tpl.twig' %}
+			</tbody>
+			<tfoot>
+			<tr>
+				<th class="tlm-column-first"><input class="cb-select-all" type="checkbox" value="all"></th>
+				<th scope="col" class="manage-column">{{ __( 'Title', 'ddl-layouts')}}</th>
+				<th scope="col" class="manage-column">{{ __( 'Post type', 'ddl-layouts')}}</th>
+				<th scope="col" class="manage-column">{{ __( 'Currently assigned Layout', 'ddl-layouts')}}</th>
+				<th scope="col" class="manage-column">{{ __( 'Template Layout to assign', 'ddl-layouts')}}</th>
+			</tr>
+			</tfoot>
+		</table>
+
+		<div class="tlm-action-bar">
+			<input type='hidden' name='action' value='step_one' />
+			<input disabled type="submit" class="button-primary tlm-convert-layouts" value="{{ __('Start layouts conversion') }}" />
+		</div>
+
+	</form>
+
+    {% else %}
+
+        <p>{{ __( 'No items eligible to be migrated to Content Layout.', 'ddl-layouts' )}}</p>
+
+    {% endif %}
+</div>

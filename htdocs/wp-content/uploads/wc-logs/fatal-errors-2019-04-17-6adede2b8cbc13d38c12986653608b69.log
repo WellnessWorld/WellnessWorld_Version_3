@@ -1,0 +1,5 @@
+2019-04-17T12:13:33+00:00 CRITICAL Uncaught Error: Call to undefined function wp_check_php_version() in /opt/bitnami/apps/wordpress/htdocs/wp-admin/about.php:88
+Stack trace:
+#0 {main}
+  thrown in /opt/bitnami/apps/wordpress/htdocs/wp-admin/about.php on line 88
+
